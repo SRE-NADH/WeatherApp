@@ -7,8 +7,8 @@ button.addEventListener("click",()=>{
 })
 
 function showPosition(position){
-    document.cookie = `latitude=${position.coords.latitude}; path=http://127.0.0.1:5500/app.html;`
-    document.cookie = `longitude=${position.coords.longitude}; path=http://127.0.0.1:5500/app.html;`
+    document.cookie = `latitude=${position.coords.latitude}; path=app.html;`
+    document.cookie = `longitude=${position.coords.longitude}; path=app.html;`
     console.log(typeof(position.coords));
 }
 
