@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>app</title>
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <h1>Welcome To The Weather App</h1>
+     <p style="font-weight: 100;">Here is your current location</p>
+     <div class="location">
+        <div class="lat">lat:1234</div>
+        <div class="log">log:12345</div>
+     </div>
+   <div class="map"> <iframe id="frame" src="https://maps.google.com/maps?q=30.856737, 10.606619&z=15&output=embed" width="360" height="270" frameborder="0" style="border:0"></iframe></div>
+    
+   <div class="weatherdata">
+    <h1>Your Weather Data<h1>
+    <div class="row1">
+        <div id="loc">Location: undefined</div>
+        <div id="windspeed">Wind Speed: undefined</div>
+        <div id="hum">Humidity: undefined</div>
+    </div>    
+    <div class="row2">
+        <div id="time">TimeZone: undefined</div>
+        <div id="pres">Pressure: undefined</div>
+        <div id="winddir">Wind Direction: undefined</div>
+    </div> 
+    <div class="row3">
+        <div id="uvi">UV Index: undefined</div>
+        <div id="flike">Feels Like: undefined</div>
+    </div> 
+   </div>
+   <script src="app.js"></script>
+</body>
+</html>
