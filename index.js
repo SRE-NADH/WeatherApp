@@ -7,8 +7,8 @@ button.addEventListener("click",()=>{
 })
 
 function showPosition(position){
-    document.cookie = `latitude=${position.coords.latitude};path=/;`
-    document.cookie = `longitude=${position.coords.longitude};path=/;`
+    document.cookie = `latitude=${position.coords.latitude};path=https://sre-nadh.github.io/;`
+    document.cookie = `longitude=${position.coords.longitude};path=https://sre-nadh.github.io/;`
     console.log(typeof(position.coords));
 }
 
