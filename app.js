@@ -3,7 +3,7 @@
 const long = document.getElementsByClassName("log")[0];
 
  const latitude = getLatitude("latitude");
- const longitude = getLongitude("longitud");
+ const longitude = getLongitude("longitude");
 
 console.log(latitude);
 console.log(longitude)
@@ -98,7 +98,7 @@ function getLongitude(CookieName){
         return "Northwest";
     }
   }
-  
+
 
   // when I creating the project the weather api is not autorized, there for i fetch data accordance to below json object
   //                
