@@ -1,50 +1,23 @@
-//  const cookieValue = document.cookie;
-    navigator.geolocation.getCurrentPosition(showPosition,errorfunction);
-let latitude;
-let longitude;
-function showPosition(position){
-    latitude=position.coords.latitude;
-    longitude=position.coords.longitude;
-}
-
-function errorfunction(error){
-    switch(error.code) {
-        case error.PERMISSION_DENIED:
-            console.error("User denied the request for geolocation.");
-            break;
-        case error.POSITION_UNAVAILABLE:
-            console.error("Location information is unavailable.");
-            break;
-        case error.TIMEOUT:
-            console.error("The request to get user location timed out.");
-            break;
-        case error.UNKNOWN_ERROR:
-            console.error("An unknown error occurred.");
-            break;
-    }
-}
-
-
-
-const lat = document.getElementsByClassName("lat")[0];
+ const cookieValue = document.cookie;
+ const lat = document.getElementsByClassName("lat")[0];
 const long = document.getElementsByClassName("log")[0];
 
-//  const latitude = getLatitude();
-//  const longitude = getLongitude();
+ const latitude = getLatitude("latitude");
+ const longitude = getLongitude("longitude");
 
 console.log(latitude);
 console.log(longitude);
 
-// function getLatitude(CookieName){
-//   let cookieArr = cookieValue.split(";")
-//   let latitudearr = cookieArr[0].split("=");
-//   return latitudearr[1];
-// }
-// function getLongitude(CookieName){
-//     let cookieArr = cookieValue.split(";")
-//     let longitudearr = cookieArr[1].split("=");
-//     return longitudearr[1];
-//   }
+function getLatitude(CookieName){
+  let cookieArr = cookieValue.split(";")
+  let latitudearr = cookieArr[0].split("=");
+  return latitudearr[1];
+}
+function getLongitude(CookieName){
+    let cookieArr = cookieValue.split(";")
+    let longitudearr = cookieArr[1].split("=");
+    return longitudearr[1];
+  }
 
   
   lat.innerHTML =`Lat: ${latitude}`;
@@ -125,7 +98,7 @@ console.log(longitude);
         return "Northwest";
     }
   }
-
+  
 
   // when I creating the project the weather api is not autorized, there for i fetch data accordance to below json object
   //                
